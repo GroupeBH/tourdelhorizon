@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
             <div className="flex items-center">
               <h1 className="text-2xl font-extrabold tracking-tight" style={{ color: "var(--blue)" }}>
-                <span style={{ color: "var(--orange)" }}>TOUR</span> DE L'HORIZON
+                <span style={{ color: "var(--orange)" }}>TOUR</span> DE L{"'"}HORIZON
               </h1>
             </div>
             <div className="hidden md:flex space-x-8">
@@ -94,8 +94,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
             {/* Bloc 1 : Logo & baseline */}
             <div className="flex flex-col gap-3">
-              <span className="text-2xl font-extrabold tracking-tight animated-gradient-text">TOUR DE L'HORIZON</span>
-              <span className="text-[var(--gray)] text-sm">Agence de communication & événementiel à Kinshasa</span>
+              <span className="text-2xl font-extrabold tracking-tight animated-gradient-text">TOUR DE L{"'"}HORIZON</span>
+              <span className="text-[var(--gray)] text-sm">Agence de communication et événementiel à Kinshasa</span>
               <div className="flex gap-3 mt-2">
                 {/* Social icons */}
                 {/* (copie les mêmes SVG que dans le header, mais en blanc) */}
@@ -141,7 +141,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
           <div className="text-center text-xs text-[var(--gray)] pb-6">
-            &copy; {new Date().getFullYear()} Tour de l'Horizon. Tous droits réservés.
+            &copy; {new Date().getFullYear()} Tour de l{"'"}Horizon. Tous droits réservés.
           </div>
         </footer>
       </body>
