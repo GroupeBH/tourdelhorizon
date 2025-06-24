@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --blue: #2234ae;
+  --orange: #ff9900;
+  --light-gray: #f5f6fa;
+  --gray: #6b7280;
+  --foreground: #22223b;
+  --glass: rgba(255,255,255,0.18);
+  --glass-border: rgba(255,255,255,0.25);
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes blob {
+  0%,100% { border-radius: 42% 58% 72% 28% / 42% 42% 58% 58%; }
+  33% { border-radius: 58% 42% 28% 72% / 58% 58% 42% 42%; }
+  66% { border-radius: 72% 28% 42% 58% / 58% 72% 28% 42%; }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.blob {
+  animation: blob 12s infinite linear;
 }
+.hero-bg {
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+}
+.hero-title {
+  font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+  letter-spacing: -1px;
+}
+.hero-cta {
+  position: relative;
+  transition: color 0.2s;
+}
+.hero-cta::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--blue), var(--orange));
+  transition: width 0.3s;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+.hero-cta:hover::after {
+  width: 100%;
+}
+.section-separator {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(90deg, var(--blue), var(--orange), #8fd3f4, var(--blue));
+  opacity: 0.15;
+  border: none;
+  margin: 0;
+}
+.animated-gradient-text {
+  background: linear-gradient(90deg, var(--blue), var(--orange), #8fd3f4, var(--blue));
+  background-size: 200% 200%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradientMove 4s linear infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.card-animated {
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+}
+.card-animated:hover {
+  transform: translateY(-12px) scale(1.04) rotate(-1deg);
+  box-shadow: 0 12px 40px 0 rgba(31,38,135,0.18);
+}
+.icon-gradient {
+  background: linear-gradient(135deg, var(--orange), #8fd3f4, var(--blue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.hero-svg-bg-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  /* Pour que le SVG couvre bien toute la section */
+  object-fit: cover;
+}
+::-webkit-scrollbar { width: 8px; background: #f5f6fa; }
+::-webkit-scrollbar-thumb { background: #2234ae44; border-radius: 8px; }
