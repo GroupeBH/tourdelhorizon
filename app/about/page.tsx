@@ -25,7 +25,7 @@ export default function About() {
           L{"'"}excellence de la communication et de l{"'"}événementiel à Kinshasa, portée par la créativité, l’innovation et l’humain.
         </motion.p>
         <Image
-          src="/about-img.png"
+          src="/about.png"
           alt="Tour Horizon équipe"
           width={520}
           height={340}

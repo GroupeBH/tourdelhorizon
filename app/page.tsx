@@ -150,6 +150,8 @@ export default function Home() {
               <Image
                 src="/about-img.png"
                 alt="Tour de l’Horizon équipe"
+                width={420}
+                height={320}
                 className="w-full h-72 object-cover"
               />
             </div>
@@ -237,6 +239,8 @@ export default function Home() {
               >
                 <Image
                   src={real.img}
+                  width={420}
+                  height={320}
                   alt={real.title}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -292,6 +296,8 @@ export default function Home() {
               >
                 <Image
                   src={t.avatar}
+                  width={420}
+                  height={320}
                   alt={t.name}
                   className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg mb-4 group-hover:border-[var(--orange)] transition-colors"
                 />
@@ -330,6 +336,8 @@ export default function Home() {
               >
                 <Image
                   src={p.logo}
+                  width={420}
+                  height={320}
                   alt={p.name}
                   className="max-h-16 max-w-[90px] object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                   style={{ filter: "grayscale(0.3)" }}
@@ -370,8 +378,8 @@ export default function Home() {
               </div>
               <div>
                 <span className="font-semibold text-[var(--blue)]">Horaires :</span><br />
-                Lundi – Vendredi : 8h30 – 18h<br />
-                Samedi : 9h – 13h
+                Lundi - Vendredi : 8h30 - 18h<br />
+                Samedi : 9h - 13h
               </div>
             </div>
             <div className="flex gap-4 mt-6">
