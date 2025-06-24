@@ -13,7 +13,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
         >
-          À propos de <span className="text-[var(--orange)]">Tour de l’Horizon</span>
+          À propos de <span className="text-[var(--orange)]">Tour de l{"'"}Horizon</span>
         </motion.h1>
         <motion.p
           className="text-lg md:text-2xl text-[var(--gray)] mb-8 text-center max-w-2xl"
@@ -21,11 +21,11 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.3 }}
         >
-          L’excellence de la communication et de l’événementiel à Kinshasa, portée par la créativité, l’innovation et l’humain.
+          L{"'"}excellence de la communication et de l{"'"}événementiel à Kinshasa, portée par la créativité, l’innovation et l’humain.
         </motion.p>
         <Image
           src="/about-img.png"
-          alt="Tour de l’Horizon équipe"
+          alt="Tour Horizon équipe"
           width={520}
           height={340}
           className="rounded-3xl shadow-2xl mx-auto"
@@ -38,7 +38,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-6 animated-gradient-text">Notre mission</h2>
             <p className="text-lg text-[var(--gray)] mb-6">
-              Accompagner les entreprises, institutions et particuliers dans la conception, l’organisation et la réussite de leurs événements et stratégies de communication, en apportant une touche d’excellence, de créativité et de fiabilité.
+              Accompagner les entreprises, institutions et particuliers dans la conception, l{"'"}organisation et la réussite de leurs événements et stratégies de communication, en apportant une touche d{"'"}excellence, de créativité et de fiabilité.
             </p>
             <ul className="space-y-3 text-[var(--foreground)]">
               <li>✔️ Écoute active et conseil personnalisé</li>

@@ -3,6 +3,7 @@
 import "./globals.css";
 import { useState } from "react";
 import { Instagram, Facebook, Linkedin } from "lucide-react";
+import Link from "next/link";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,10 +20,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </h1>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="/" className="font-medium hover:text-[var(--orange)] transition-colors">Accueil</a>
-              <a href="/about" className="font-medium hover:text-[var(--orange)] transition-colors">À propos</a>
-              <a href="/services" className="font-medium hover:text-[var(--orange)] transition-colors">Services</a>
-              <a href="/contact" className="font-medium hover:text-[var(--orange)] transition-colors">Contact</a>
+              <div className="font-medium hover:text-[var(--orange)] transition-colors">
+                <Link href="/" > Accueil</Link>  
+              </div>
+              <div className="font-medium hover:text-[var(--orange)] transition-colors">
+                <Link href="/about">À propos</Link>   
+              </div>
+              <div  className="font-medium hover:text-[var(--orange)] transition-colors">
+                <Link href="/services">Services</Link>
+              </div>
+              <div className="font-medium hover:text-[var(--orange)] transition-colors">
+                <Link href="/contact">Contact</Link>
+              </div>
             </div>
 
             <div className="hidden md:flex gap-3 ml-6">
@@ -47,10 +56,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {menuOpen && (
             <div>
                <div className="md:hidden bg-white shadow-lg px-6 py-4 space-y-4">
-                  <a href="/" className="block font-medium hover:text-[var(--orange)]">Accueil</a>
-                  <a href="/about" className="block font-medium hover:text-[var(--orange)]">À propos</a>
-                  <a href="/services" className="block font-medium hover:text-[var(--orange)]">Services</a>
-                  <a href="/contact" className="block font-medium hover:text-[var(--orange)]">Contact</a>
+                  <div className="font-medium hover:text-[var(--orange)] transition-colors">
+                    <Link href="/" > Accueil</Link>  
+                  </div>
+                  <div className="font-medium hover:text-[var(--orange)] transition-colors">
+                    <Link href="/about">À propos</Link>   
+                  </div>
+                  <div  className="font-medium hover:text-[var(--orange)] transition-colors">
+                    <Link href="/services">Services</Link>
+                  </div>
+                  <div className="font-medium hover:text-[var(--orange)] transition-colors">
+                    <Link href="/contact">Contact</Link>
+                  </div>
                 </div>
                 <div className="md:hidden flex gap-3 ml-6">
                   <a href="#" aria-label="Instagram" className="rounded-full p-2 hover:bg-[var(--orange)]/20 transition text-xl">
@@ -117,7 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   type="submit"
                   className="bg-[var(--orange)] text-white font-semibold py-2 rounded-md hover:bg-[var(--blue)] transition-colors"
                 >
-                  S’inscrire
+                  S{"'"}inscrire
                 </button>
               </form>
               <span className="text-xs text-[var(--gray)] mt-2 block">Recevez nos actus et inspirations événementielles.</span>

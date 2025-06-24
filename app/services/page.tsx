@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -42,7 +44,7 @@ export default function ServicesPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          Découvrez l’ensemble de nos expertises pour sublimer vos projets à Kinshasa et partout en RDC.
+          Découvrez l{"'"}ensemble de nos expertises pour sublimer vos projets à Kinshasa et partout en RDC.
         </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {services.map((service, idx) => (
@@ -78,12 +80,12 @@ export default function ServicesPage() {
                 { img: "/portfolio4.jpg", title: "Soirée caritative", desc: "Ambiance élégante et mobilisation réussie." },
                 { img: "/portfolio5.jpg", title: "Festival urbain", desc: "Scénographie, technique et animation grand public." },
                 { img: "/portfolio6.jpg", title: "Séminaire RH", desc: "Organisation sur-mesure pour 200+ participants." },
-            ].map((real, i) => (
+            ].map((real) => (
                 <div
                 key={real.title}
                 className="relative group rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300"
                 >
-                <img
+                <Image
                     src={real.img}
                     alt={real.title}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -96,12 +98,11 @@ export default function ServicesPage() {
             ))}
             </div>
             <div className="flex justify-center">
-            <a
-                href="/services"
+            <div
                 className="inline-block bg-[var(--orange)] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[var(--blue)] transition-colors text-lg"
             >
-                Voir tous nos services
-            </a>
+                <Link href="/services">Voir tous nos services</Link>  
+            </div>
             </div>
         </div>
 </section>

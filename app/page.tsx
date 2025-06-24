@@ -1,71 +1,72 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+// import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
-const services = [
-  {
-    title: "Événementiel",
-    desc: "Organisation d'événements sur-mesure, corporate, privés et culturels.",
-    icon: "🎉",
-  },
-  {
-    title: "Communication",
-    desc: "Stratégie de communication, branding, réseaux sociaux, relations presse.",
-    icon: "💬",
-  },
-  {
-    title: "Marketing",
-    desc: "Campagnes innovantes, influence, activation de marque.",
-    icon: "📈",
-  },
-  {
-    title: "Conseil",
-    desc: "Accompagnement, audit, formation, coaching.",
-    icon: "🧠",
-  },
-  {
-    title: "Production",
-    desc: "Photo, vidéo, digital, supports print & web.",
-    icon: "🎥",
-  },
-  {
-    title: "Gestion de projet",
-    desc: "Suivi, coordination, reporting, gestion agile.",
-    icon: "📋",
-  },
-];
+// const services = [
+//   {
+//     title: "Événementiel",
+//     desc: "Organisation d'événements sur-mesure, corporate, privés et culturels.",
+//     icon: "🎉",
+//   },
+//   {
+//     title: "Communication",
+//     desc: "Stratégie de communication, branding, réseaux sociaux, relations presse.",
+//     icon: "💬",
+//   },
+//   {
+//     title: "Marketing",
+//     desc: "Campagnes innovantes, influence, activation de marque.",
+//     icon: "📈",
+//   },
+//   {
+//     title: "Conseil",
+//     desc: "Accompagnement, audit, formation, coaching.",
+//     icon: "🧠",
+//   },
+//   {
+//     title: "Production",
+//     desc: "Photo, vidéo, digital, supports print & web.",
+//     icon: "🎥",
+//   },
+//   {
+//     title: "Gestion de projet",
+//     desc: "Suivi, coordination, reporting, gestion agile.",
+//     icon: "📋",
+//   },
+// ];
 
-const testimonials = [
-  {
-    name: "Sarah M.",
-    role: "Responsable RH",
-    quote:
-      "Une équipe créative et professionnelle, notre événement a été un vrai succès !",
-    avatar: "/avatar1.png",
-  },
-  {
-    name: "Jean K.",
-    role: "Directeur Marketing",
-    quote:
-      "Tour de l’Horizon a boosté notre image de marque avec une campagne remarquable.",
-    avatar: "/avatar2.png",
-  },
-  {
-    name: "Fatou D.",
-    role: "Entrepreneure",
-    quote:
-      "Un accompagnement sur-mesure, à l’écoute et toujours force de proposition.",
-    avatar: "/avatar3.png",
-  },
-];
+// const testimonials = [
+//   {
+//     name: "Sarah M.",
+//     role: "Responsable RH",
+//     quote:
+//       "Une équipe créative et professionnelle, notre événement a été un vrai succès !",
+//     avatar: "/avatar1.png",
+//   },
+//   {
+//     name: "Jean K.",
+//     role: "Directeur Marketing",
+//     quote:
+//       "Tour de l’Horizon a boosté notre image de marque avec une campagne remarquable.",
+//     avatar: "/avatar2.png",
+//   },
+//   {
+//     name: "Fatou D.",
+//     role: "Entrepreneure",
+//     quote:
+//       "Un accompagnement sur-mesure, à l’écoute et toujours force de proposition.",
+//     avatar: "/avatar3.png",
+//   },
+// ];
 
-const partners = [
-  "Logo1", "Logo2", "Logo3", "Logo4", "Logo5"
-];
+// const partners = [
+//   "Logo1", "Logo2", "Logo3", "Logo4", "Logo5"
+// ];
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--light-gray)]">
@@ -95,7 +96,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
           >
-            Donnez de l’ampleur à vos <span className="text-[var(--orange)]">événements</span> <br />
+            Donnez de l{"'"}ampleur à vos <span className="text-[var(--orange)]">événements</span> <br />
             et à votre <span className="text-[#8fd3f4]">image</span>
           </motion.h1>
           <motion.p
@@ -104,7 +105,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.3 }}
           >
-            Agence de communication & organisation d’événements à Kinshasa – <span className="text-[var(--orange)] font-semibold">Créativité</span>, <span className="text-[#2234ae] font-semibold">élégance</span> et <span className="text-[#8fd3f4] font-semibold">efficacité</span> pour des expériences inoubliables.
+            Agence de communication & organisation d{"'"}événements à Kinshasa – <span className="text-[var(--orange)] font-semibold">Créativité</span>, <span className="text-[#2234ae] font-semibold">élégance</span> et <span className="text-[#8fd3f4] font-semibold">efficacité</span> pour des expériences inoubliables.
           </motion.p>
           <motion.div
             className="flex gap-4"
@@ -112,12 +113,12 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <a href="#contact" className="hero-cta text-center bg-[var(--blue)] text-white font-semibold py-3 px-8 rounded-full shadow hero-glow hover:bg-[var(--orange)] transition-colors">
-              Contactez-nous
-            </a>
-            <a href="#services" className="hero-cta text-center border-2 border-[var(--blue)] text-[var(--blue)] font-semibold py-3 px-8 rounded-full hover:bg-[var(--blue)] hover:text-white transition-colors">
-              Nos services
-            </a>
+            <div className="hero-cta text-center bg-[var(--blue)] text-white font-semibold py-3 px-8 rounded-full shadow hero-glow hover:bg-[var(--orange)] transition-colors">
+              <Link href="/contact">Contactez-nous</Link>
+            </div>
+            <div className="hero-cta text-center border-2 border-[var(--blue)] text-[var(--blue)] font-semibold py-3 px-8 rounded-full hover:bg-[var(--blue)] hover:text-white transition-colors">
+              <Link href="/services">Nos services</Link>
+            </div>
           </motion.div>
         </div>
         <div className="w-full md:w-1/2 flex justify-center items-center mb-10 md:mb-0 relative z-10">
@@ -146,7 +147,7 @@ export default function Home() {
           {/* Bloc image */}
           <div className="md:w-1/2 flex justify-center">
             <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white/70 backdrop-blur-lg transition-transform hover:scale-105 duration-300">
-              <img
+              <Image
                 src="/about-img.png"
                 alt="Tour de l’Horizon équipe"
                 className="w-full h-72 object-cover"
@@ -164,12 +165,9 @@ export default function Home() {
               <li>✔️ Équipe créative & expérimentée</li>
               <li>✔️ Plus de 200 clients satisfaits</li>
             </ul>
-            <a
-              href="/about"
-              className="inline-block bg-[var(--orange)] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[var(--blue)] hover:text-white transition-colors text-lg"
-            >
-              Découvrir l’agence
-            </a>
+            <div className="inline-block bg-[var(--orange)] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[var(--blue)] hover:text-white transition-colors text-lg">
+              <Link href="/about">Découvrir l{"'"}agence</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -206,12 +204,11 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center">
-          <a
-            href="/services"
+          <div
             className="inline-block bg-[var(--blue)] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[var(--orange)] transition-colors text-lg"
           >
-            Découvrir tous nos services
-          </a>
+            <Link href="/services">Découvrir tous nos services</Link>
+          </div>
         </div>
       </div>
     </section>
@@ -233,12 +230,12 @@ export default function Home() {
               { img: "/portfolio4.jpg", title: "Soirée caritative", desc: "Ambiance élégante et mobilisation réussie." },
               { img: "/portfolio5.jpg", title: "Festival urbain", desc: "Scénographie, technique et animation grand public." },
               { img: "/portfolio6.jpg", title: "Séminaire RH", desc: "Organisation sur-mesure pour 200+ participants." },
-            ].map((real, i) => (
+            ].map((real) => (
               <div
                 key={real.title}
                 className="relative group rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300"
               >
-                <img
+                <Image
                   src={real.img}
                   alt={real.title}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -251,12 +248,11 @@ export default function Home() {
             ))}
           </div>
           <div className="flex justify-center">
-            <a
-              href="/services"
+            <div
               className="inline-block bg-[var(--orange)] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[var(--blue)] transition-colors text-lg"
             >
-              Voir tous nos services
-            </a>
+              <Link href="/services">Voir tous nos services</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -289,12 +285,12 @@ export default function Home() {
                 role: "Responsable Com.",
                 text: "Un accompagnement sur-mesure et des résultats au-delà de nos attentes. Merci !",
               },
-            ].map((t, i) => (
+            ].map((t) => (
               <div
                 key={t.name}
                 className="glass rounded-3xl p-8 shadow-xl flex flex-col items-center text-center hover:scale-105 hover:shadow-2xl transition-transform duration-300 group"
               >
-                <img
+                <Image
                   src={t.avatar}
                   alt={t.name}
                   className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg mb-4 group-hover:border-[var(--orange)] transition-colors"
@@ -326,13 +322,13 @@ export default function Home() {
               { logo: "/logo3.png", name: "Marque C" },
               { logo: "/logo4.png", name: "ONG D" },
               { logo: "/logo5.png", name: "Startup E" },
-            ].map((p, i) => (
+            ].map((p) => (
               <div
                 key={p.name}
                 className="glass rounded-xl p-4 flex items-center justify-center shadow-lg hover:shadow-2xl transition-shadow duration-300 group w-32 h-24"
                 style={{ minHeight: 96 }}
               >
-                <img
+                <Image
                   src={p.logo}
                   alt={p.name}
                   className="max-h-16 max-w-[90px] object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
