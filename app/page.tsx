@@ -343,8 +343,8 @@ export default function Home() {
       {/* Call to Action / Newsletter */}
       <section id="contact" className="py-20 bg-gradient-to-r from-[var(--blue)] to-[var(--orange)]">
         <div className="container mx-auto px-6 flex flex-col items-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Prêt à collaborer ?</h2>
-          <p className="text-lg text-white mb-6">N'hésitez pas à nous contacter pour toute question ou demande d'information.</p>
+          <h2 className="text-3xl font-bold text-white mb-6">Prêt à collaborer ?</h2>
+          <p className="text-lg text-white mb-6">N{"'"}hésitez pas à nous contacter pour toute question ou demande d{"'"}information.</p>
           <a href="#" className="bg-white text-[var(--blue)] font-bold py-3 px-8 rounded-full hover:bg-[var(--orange)] hover:text-white transition-colors shadow-lg">Contactez-nous</a>
         </div>
       </section>

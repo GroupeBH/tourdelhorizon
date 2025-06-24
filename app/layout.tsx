@@ -105,11 +105,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div>
               <h3 className="font-bold mb-3 text-[var(--orange)]">Navigation</h3>
               <ul className="space-y-2">
-                <li><a href="/" className="hover:text-[var(--orange)] transition-colors">Accueil</a></li>
-                <li><a href="/about" className="hover:text-[var(--orange)] transition-colors">À propos</a></li>
-                <li><a href="/services" className="hover:text-[var(--orange)] transition-colors">Services</a></li>
-                <li><a href="/#portfolio" className="hover:text-[var(--orange)] transition-colors">Réalisations</a></li>
-                <li><a href="/#contact" className="hover:text-[var(--orange)] transition-colors">Contact</a></li>
+                <li><Link href="/" className="hover:text-[var(--orange)] transition-colors">Accueil</Link></li>
+                <li><Link href="/about" className="hover:text-[var(--orange)] transition-colors">À propos</Link></li>
+                <li><Link href="/services" className="hover:text-[var(--orange)] transition-colors">Services</Link></li>
+                <li><Link href="/#portfolio" className="hover:text-[var(--orange)] transition-colors">Réalisations</Link></li>
+                <li><Link href="/#contact" className="hover:text-[var(--orange)] transition-colors">Contact</Link></li>
               </ul>
             </div>
             {/* Bloc 3 : Contact rapide */}

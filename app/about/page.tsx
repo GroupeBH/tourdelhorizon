@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -127,9 +128,9 @@ export default function About() {
       <section className="py-20 bg-gradient-to-r from-[var(--blue)] to-[var(--orange)]">
         <div className="container mx-auto px-6 flex flex-col items-center">
           <h2 className="text-3xl font-bold text-white mb-6">Envie de collaborer avec nous ?</h2>
-          <a href="/#contact" className="bg-white text-[var(--blue)] font-bold py-3 px-8 rounded-full hover:bg-[var(--orange)] hover:text-white transition-colors shadow-lg">
-            Contactez-nous
-          </a>
+          <div className="bg-white text-[var(--blue)] font-bold py-3 px-8 rounded-full hover:bg-[var(--orange)] hover:text-white transition-colors shadow-lg">
+            <Link href="/#contact">Contactez-nous</Link>
+          </div>
         </div>
       </section>
     </main>
